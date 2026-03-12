@@ -1,7 +1,10 @@
-package com.example.booking;
+package booking.Service;
+
+import booking.Booking;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class BookingService {
     private final List<Booking> bookings= new ArrayList<>();
@@ -10,7 +13,7 @@ public class BookingService {
         return bookings;
     }
 
-    public List<Booking> CreateBooking(Booking booking){
+    public List<Booking> createBooking(Booking booking){
         if(booking.getRoomNumber() < 1 || booking.getRoomNumber() > 9){
             throw new IllegalArgumentException("Room number must be between 1 and 9");
         }
